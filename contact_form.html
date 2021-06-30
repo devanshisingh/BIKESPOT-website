@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+  function validation(){
+    alert("hello");
+    var fname = document.form.name.value;
+    var re_name = /^[a-zA-Z\\s]*$/;
+    if(re_name.test(name))
+    {
+      document.form.name.style.border = "solid 3px red";
+      alert("Enter a Valid FirstName");
+      return false;
+    }
+    var email = document.form.email.value;
+    var re_email=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,})/;
+    if(!(re_email.test(email)))
+    {
+      document.form.email.style.border = "solid 3px red";
+      alert("Insert Valid Email ID");
+      return false;
+    }
+    alert("Form Submitted!!");
+  }
+</script>
+</head>
+<body>
+
+<div class="row" style="height: 100vh;">
+  <div class="column" id="left" style="width: 35%;">
+    <img src="images/contact.jpg" alt="Image">
+  </div>
+  <div class="column" id="right" style="width: 65%;">
+    <a href="home.php" style="color: black; text-decoration: none;">
+      <p style="margin: 4vh; line-height:28px; vertical-align:center;">
+        <i class="fa fa-chevron-left" style="color: rgb(227, 223, 211); font-size: 20px;  display: inline-block; line-height:20px; vertical-align:middle;"></i>
+        <b style="font-size: 12px;  display: inline-block; line-height:28px; vertical-align:middle;">Back to Homepage</b>
+      </p>
+    </a>
+    <h2 style="margin: 7vh; font-size: 30px;">Contact Us</h2>
+    <h4 style="margin: 2vh;">Lets Talk!</h4>
+    <form id="form" action="php/feedback.php" onsubmit="return contact_form()" method="post" name="form">
+      <input type="text" name="name" placeholder="Your name" size="40" required><br>
+      <input type="text" name="email" placeholder="Your email address" size="40" required><br>
+      <textarea name="msg" cols="40" rows="4" placeholder="Your message" required></textarea><br>
+      <button type="submit"><h4>Send message</h4></button><br>
+    </form>
+    <!-- <button type="submit" form="form"><h4>Send message</h4></button><br> -->
+  </div>
+</div>
+
+</body>
+</html>
