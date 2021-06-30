@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  header
+  {
+      top: 0px;
+      left: 0px;
+  }
+  /* Header/Blog Title */
+  .ad-top {
+    padding: 20px;
+    margin: 14vh 3vw 0 3vw;
+    font-size: 20px;
+    text-align: center;
+    background: white;
+  }

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  header
+  {
+      top: 0px;
+      left: 0px;
+  }
+
+.form-container
+{
+    display: none;
+    animation: dropdown 0.4s ease;
+}
+
+.form-container input, select
+{
+  margin: 10px;
+}
+
+@keyframes dropdown
+{
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+
+.verfication-modal-content
+{
+  padding: 0;
+  width: 400px;
+}
+.verification-modal-content h1
+{
+  color: white;
+  background: rgb(37, 102, 95);
+  text-align: center;
+  padding: 20px;
+}
+
+.verification-modal-content input
+{
+  width: 100%;
+  padding: 5px;
+  margin: 20px 0;
+}
+
+.verification-modal-content button
+{
+  padding: 20px 5vw;
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .verification-modal-content button
+  {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.link-para
+{
+  cursor: pointer;
+}
+
+.link-para:hover
+{
+  color: blue;
+}
+
+.link-para:active
+{
+  color: red;
+}
+
+mark{
+  background-color: green;
+  color: white;
+  font-weight: 800;
+  padding: 2px;
+}
+
+.exit-form-animation
+{
+  background-color: red;
+  /* animation: goleft 1s ease;
+  animation-fill-mode: forwards; */
+}
+
+@keyframes goleft
+{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100px);
+  }
+}
